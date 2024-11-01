@@ -25,7 +25,10 @@ export default function FruitApp() {
         }
         const data = await response.json()
         setFruits(data)
-      } catch (err) {
+      } 
+  
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      catch (err) {
         setError('Failed to load fruits. Please try again later.')
       } finally {
         setIsLoading(false)
